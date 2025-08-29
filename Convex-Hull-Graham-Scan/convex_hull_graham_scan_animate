@@ -114,17 +114,17 @@ def update(frame):
             line1.set_data(hull_dashed_lines[:,0], hull_dashed_lines[:,1])
     return line1, line2
 
-animation = FuncAnimation(fig=fig, 
+ani = FuncAnimation(fig=fig, 
                           func=update, 
                           init_func=init,
                           frames=len(steps),
                           interval=300, 
                           repeat=False)
 
-# To save the animation using Pillow as a gif
+## To save the animation using Pillow as a gif
 # writer = PillowWriter(fps=15,
 #                       metadata=dict(artist='Me'),
 #                       bitrate=1800)
-# ani.save('scatter.gif', writer=writer)
+# ani.save('convex_hull.gif', writer=writer)
 
 plt.show()
